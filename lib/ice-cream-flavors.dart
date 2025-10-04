@@ -164,14 +164,14 @@ class _FlavorScreenState extends State<FlavorScreen> {
 }
 
 
-// _launchFlavors() async {
-//   _launchFlavors() {
-//     MaterialPageRoute(
-//         builder: (context) => const IceCreamFlavors(
-//           flavorsUrl: "https://lakecity-creamery.com/ice-cream-flavors",
-//         ));
-//   }
-// }
+_launchFlavors() async {
+  _launchFlavors() {
+    MaterialPageRoute(
+        builder: (context) => const FlavorScreen(
+          flavorsUrl: "https://lakecity-creamery.com/flavors.txt",
+        ));
+  }
+}
 
 _launchMenu() async {
   const url = 'https://store-x36sk.mybigcommerce.com/menu/';

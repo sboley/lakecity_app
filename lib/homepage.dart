@@ -4,8 +4,8 @@ import 'package:url_launcher/url_launcher.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({Key? key}) : super(key: key);
-  @override
-   build(BuildContext context) async {
+
+  Widget build(BuildContext context) {
     return Scaffold(
       drawer: Drawer(
         child: ListView(
@@ -15,19 +15,7 @@ class HomePage extends StatelessWidget {
               decoration: BoxDecoration(color: Colors.yellow),
               child: Text('Lake City Creamery'),
             ),
-            ListTile(title: const Text('Flavors'), onTap:
-            await Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const FlavorScreen(
-                  flavorsUrl:
-                  "https://lakecity-creamery.com/flavors.txt",
-                ),
-              ),
-            )
-            ),
-
-            //_launchFlavors),
+            ListTile(title: const Text('Flavors'), onTap: _launchFlavors),
             ListTile(title: const Text('Menu'), onTap: _launchMenu),
             ListTile(title: const Text('Location'), onTap: _launchMap),
             ListTile(title: const Text('Facebook'), onTap: _launchShare),
@@ -279,50 +267,48 @@ class HomePage extends StatelessWidget {
 
 
 
-_launchFlavors() async {
-  const url = 'https://store-x36sk.mybigcommerce.com/ice-cream-flavors/';
-  if (await canLaunch(url)) {
-    await launch(url);
-  } else {
-    throw 'Could not launch $url';
-  }
-}
+_launchFlavors() {
+      MaterialPageRoute(
+          builder: (context) => const FlavorScreen(
+            flavorsUrl: "https://lakecity-creamery.com/flavors.txt",
+          ));
+          }
 
 _launchMenu() async {
   const url = 'https://store-x36sk.mybigcommerce.com/menu/';
-  if (await canLaunch(url)) {
-    await launch(url);
+  if (await canLaunchUrl(url as Uri)) {
+    await launchUrl;
   } else {
-    throw 'Could not launch $url';
+    throw 'Could not launchUrl $url';
   }
 }
 
 _launchShare() async {
   const url = 'https://www.facebook.com/LakeCityCreamery/';
-  if (await canLaunch(url)) {
-    await launch(url);
+  if (await canLaunchUrl(url as Uri)) {
+    await launchUrl;
   } else {
-    throw 'Could not launch $url';
+    throw 'Could not launchUrl $url';
   }
 }
 
 _launchMap() async {
   const url =
       'https://www.google.com/search?q=lake+city+creamery&oq=lake+city+creamery&aqs=chrome..69i57j46i175i199i512j69i60l2j69i61.2831j0j15&sourceid=chrome&ie=UTF-8#';
-  if (await canLaunch(url)) {
-    await launch(url);
+  if (await canLaunchUrl(url as Uri)) {
+    await launchUrl;
   } else {
-    throw 'Could not launch $url';
+    throw 'Could not launchUrl $url';
   }
 }
 
 _launchCall() async {
   const url =
       'https://www.google.com/search?q=lake+city+creamery&sxsrf=AOaemvJdaIKrzfItfX1cVeVh8dGAGR8AUw%3A1633444533277&source=hp&ei=tWJcYcKjDv6XwbkP1fqlwAc&iflsig=ALs-wAMAAAAAYVxwxWdUThkQP7BguGtKdc03NlqYxoXV&gs_ssp=eJzj4tFP1zc0ysg2KzYzLjZgtFI1qLCwME41SbSwNDQ2NTBJM0yxMqgwtTAwTkxKMTYzSTVONUg18hLKScxOVUjOLKlUSC5KTcxNLaoEANl1FVk&oq=lake+city+creamery&gs_lcp=Cgdnd3Mtd2l6EAEYADINCC4QxwEQrwEQJxCTAjIFCC4QgAQyCAguEIAEELEDMggILhCABBCxAzIFCAAQgAQyBQguEIAEMhEILhCABBCxAxCDARDHARCjAjIICC4QgAQQsQMyCAguEIAEELEDMgUIABCABDoECCMQJzoFCAAQkQI6DgguEIAEELEDEMcBEKMCOg4ILhCABBCxAxDHARDRAzoICAAQgAQQsQM6CwguEIAEEMcBEK8BOgsILhCABBCxAxCDAToICC4QsQMQgwE6CgguEMcBEK8BECc6BQguEJECOggIABCABBDJA1CQDVjRGWCGKmgAcAB4AIABe4gBpwaSAQMwLjeYAQCgAQE&sclient=gws-wiz';
-  if (await canLaunch(url)) {
-    await launch(url);
+  if (await canLaunchUrl(url as Uri)) {
+    await launchUrl;
   } else {
-    throw 'Could not launch $url';
+    throw 'Could not launchUrl $url';
   }
 }
 

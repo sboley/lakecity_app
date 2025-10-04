@@ -1,0 +1,13 @@
+Vanilla	Creamy vanilla base with real vanilla
+Chocolate	Creamy chocolate with cocoa and vanilla
+Butter Pecan	Vanilla base ice cream with pecans roasted in butter
+Buckeye	Peanut butter based ice cream with honey and freckled milk chocolate
+Peanut Butter Cup	Peanut butter base ice cream with chunks of peanut butter cups
+Cookie Monster	Vanilla based ice cream with home made chocolate chip cookie pieces, Oreos, and M&Ms
+Dulce De Leche	A caramel based iced cream with ripples of caramelized sweet milk
+Cookie Dough	Vanilla based ice cream with pieces of chocolate chip cookie dough
+Strawberry	Strawberry based ice cream made with real strawberries
+Birthday Cake	White cake batter ice cream with l
+Cookies & Creme	Vanilla based ice cream with Oreos
+Mint Freckle	Mint based ice cream with freckled dark chocolate
+BlueMoon	Trademarked flavored blue ice cream with a sweet mixed fruit flavor
